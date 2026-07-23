@@ -23,7 +23,7 @@ for rel in ['requester/index.html', 'supporter/index.html']:
     print(rel, 'ids=', len(parser.ids), 'missing_targets=', missing, 'duplicate_ids=', duplicates)
     failed |= bool(missing or duplicates)
 
-check_files = ['requester/index.html', 'supporter/index.html', 'VIDEO_PLAN.md', 'APP_SPECIFICATION.md']
+check_files = ['requester/index.html', 'supporter/index.html', 'video/VIDEO_PLAN.md', 'APP_SPECIFICATION.md']
 remaining = [rel for rel in check_files if '地域貢献ポイント' in (root / rel).read_text(encoding='utf-8')]
 print('regional_points_remaining=', remaining)
 failed |= bool(remaining)

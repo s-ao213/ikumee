@@ -1,4 +1,307 @@
-.mode-grid{display:grid;gap:14px;margin-top:22px}.mode-card{border:2px solid var(--line);background:#fff;border-radius:20px;padding:20px;text-align:left;cursor:pointer}.mode-card strong{display:block;font-size:1.05rem;margin-bottom:5px}.mode-card small{color:var(--muted);line-height:1.5}.mode-card--senior{border-color:var(--blue);background:var(--sky)}.mode-card--senior strong{color:var(--blue)}
-.simple-home{padding:24px 20px}.simple-home .brand{margin-bottom:28px}.simple-home h1{font-size:1.8rem;line-height:1.45;margin:0 0 12px}.simple-home p{font-size:1.1rem;line-height:1.7;color:#3d4755}.senior-action{width:100%;min-height:78px;border:0;border-radius:18px;background:var(--blue);color:#fff;font-size:1.25rem;font-weight:900;margin:10px 0;cursor:pointer}.senior-action.secondary{background:#fff;color:var(--blue);border:3px solid var(--blue)}
-.senior-mode .screen{font-size:19px}.senior-mode .topbar{height:76px}.senior-mode .topbar h1{font-size:1.25rem}.senior-mode .field label,.senior-mode .field-label{font-size:1.05rem}.senior-mode .field input,.senior-mode .field textarea,.senior-mode .field select{font-size:1.08rem;padding:18px;border-width:2px}.senior-mode .form-section h3{font-size:1.15rem}.senior-mode .primary-btn,.senior-mode .secondary-btn,.senior-mode .danger-btn{font-size:1.1rem;padding:19px}.senior-mode .assist-box{font-size:.95rem}
-.cancel-list{display:grid;gap:10px}.cancel-option{display:flex;align-items:center;gap:12px;padding:15px;border:1px solid var(--line);border-radius:14px;background:#fff;font-size:.9rem}.cancel-option input{width:20px;height:20px;accent-color:var(--blue)}.map-large{height:520px}.screen-subtitle{color:var(--muted);font-size:.82rem;margin-top:-5px}.bottom-two{display:grid;grid-template-columns:1fr 1.7fr;gap:10px;margin-top:18px}
+.mode-grid {
+  display:grid;
+  gap:14px;
+  margin-top:22px
+}
+
+.mode-card {
+  border:2px solid var(--line);
+  background:#fff;
+  border-radius:20px;
+  padding:20px;
+  text-align:left;
+  cursor:pointer
+}
+
+.mode-card strong {
+  display:block;
+  font-size:1.05rem;
+  margin-bottom:5px
+}
+
+.mode-card small {
+  color:var(--muted);
+  line-height:1.5
+}
+
+.mode-card--senior {
+  border-color:var(--blue);
+  background:var(--sky)
+}
+
+.mode-card--senior strong {
+  color:var(--blue)
+}
+
+.simple-home {
+  padding:24px 20px
+}
+
+.simple-home .brand {
+  margin-bottom:28px
+}
+
+.simple-home h1 {
+  font-size:1.8rem;
+  line-height:1.45;
+  margin:0 0 12px
+}
+
+.simple-home p {
+  font-size:1.1rem;
+  line-height:1.7;
+  color:#3d4755
+}
+
+.senior-action {
+  width:100%;
+  min-height:78px;
+  border:0;
+  border-radius:18px;
+  background:var(--blue);
+  color:#fff;
+  font-size:1.25rem;
+  font-weight:900;
+  margin:10px 0;
+  cursor:pointer
+}
+
+.senior-action.secondary {
+  background:#fff;
+  color:var(--blue);
+  border:3px solid var(--blue)
+}
+
+.mode-card.selected {
+  border-color:var(--blue);
+  box-shadow:0 0 0 4px rgba(8,119,232,.14)
+}
+
+.mode-card.selected::after {
+  content:"選択中";
+  display:inline-block;
+  margin-top:10px;
+  color:var(--blue);
+  font-weight:900
+}
+
+.simple-mode .screen {
+  font-size:19px
+}
+
+.simple-mode .topbar {
+  height:76px
+}
+
+.simple-mode .topbar h1 {
+  font-size:1.25rem
+}
+
+.simple-mode .field label,.simple-mode .field-label {
+  font-size:1.05rem
+}
+
+.simple-mode .field input,.simple-mode .field textarea,.simple-mode .field select {
+  font-size:1.08rem;
+  padding:18px;
+  border-width:2px
+}
+
+.simple-mode .form-section h3 {
+  font-size:1.15rem
+}
+
+.simple-mode .primary-btn,.simple-mode .secondary-btn,.simple-mode .danger-btn {
+  font-size:1.1rem;
+  padding:19px
+}
+
+.simple-mode .assist-box {
+  font-size:.95rem
+}
+
+.cancel-list {
+  display:grid;
+  gap:10px
+}
+
+.cancel-option {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:15px;
+  border:1px solid var(--line);
+  border-radius:14px;
+  background:#fff;
+  font-size:.9rem
+}
+
+.cancel-option input {
+  width:20px;
+  height:20px;
+  accent-color:var(--blue)
+}
+
+.map-large {
+  height:520px
+}
+
+.screen-subtitle {
+  color:var(--muted);
+  font-size:.82rem;
+  margin-top:-5px
+}
+
+.bottom-two {
+  display:grid;
+  grid-template-columns:1fr 1.7fr;
+  gap:10px;
+  margin-top:18px
+}
+
+.chat-screen {
+  background:#eef3f8
+}
+
+.chat-user {
+  display:flex;
+  align-items:center;
+  gap:10px
+}
+
+.chat-user .avatar {
+  width:40px;
+  height:40px;
+  font-size:1.2rem
+}
+
+.chat-user strong {
+  display:block;
+  font-size:.9rem
+}
+
+.chat-user small {
+  color:var(--green);
+  font-size:.7rem
+}
+
+.chat-messages {
+  height:calc(100svh - 150px);
+  min-height:520px;
+  overflow-y:auto;
+  padding:18px 14px 110px
+}
+
+.chat-row {
+  display:flex;
+  margin-bottom:12px
+}
+
+.chat-row--mine {
+  justify-content:flex-end
+}
+
+.chat-bubble {
+  max-width:78%;
+  padding:12px 14px;
+  border-radius:17px 17px 17px 5px;
+  background:#fff;
+  color:var(--ink);
+  font-size:.86rem;
+  line-height:1.55;
+  box-shadow:0 3px 10px rgba(35,72,112,.07)
+}
+
+.chat-row--mine .chat-bubble {
+  border-radius:17px 17px 5px 17px;
+  background:var(--blue);
+  color:#fff
+}
+
+.chat-time {
+  margin-top:5px;
+  color:var(--muted);
+  font-size:.65rem
+}
+
+.chat-image {
+  padding:5px;
+  overflow:hidden
+}
+
+.chat-image img {
+  display:block;
+  width:100%;
+  max-width:220px;
+  max-height:240px;
+  border-radius:12px;
+  object-fit:cover
+}
+
+.chat-compose {
+  position:fixed;
+  bottom:0;
+  width:min(100%,480px);
+  display:grid;
+  grid-template-columns:46px 1fr 54px;
+  gap:8px;
+  padding:10px 12px calc(10px + env(safe-area-inset-bottom));
+  background:#fff;
+  border-top:1px solid var(--line);
+  z-index:30
+}
+
+.chat-compose input[type="text"] {
+  min-width:0;
+  border:1.5px solid var(--line);
+  border-radius:100px;
+  padding:11px 14px;
+  outline:none
+}
+
+.chat-compose input[type="text"]:focus {
+  border-color:var(--blue)
+}
+
+.chat-file {
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  background:var(--sky);
+  color:var(--blue);
+  font-size:1.25rem;
+  cursor:pointer
+}
+
+.chat-file input {
+  display:none
+}
+
+.chat-send {
+  border:0;
+  border-radius:50%;
+  background:var(--blue);
+  color:#fff;
+  font-weight:900;
+  cursor:pointer
+}
+
+.simple-mode .chat-messages {
+  height:calc(100svh - 175px)
+}
+
+.simple-mode .chat-bubble {
+  max-width:88%;
+  padding:16px;
+  font-size:1.05rem
+}
+
+.simple-mode .chat-compose {
+  grid-template-columns:58px 1fr 66px;
+  padding:14px
+}
+
+.simple-mode .chat-compose input[type="text"] {
+  padding:16px;
+  font-size:1.05rem
+}

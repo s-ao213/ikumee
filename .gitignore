@@ -1,3 +1,9 @@
 .agents
 ユースケース案.png
-VIDEO_PLAN.md
+
+# 動画制作に関する構成案・台本はGitHubへ公開しない
+video/
+
+# OS・エディタが作成する一時ファイル
+.DS_Store
+Thumbs.db
